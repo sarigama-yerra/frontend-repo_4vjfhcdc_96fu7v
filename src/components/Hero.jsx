@@ -1,5 +1,3 @@
-import Spline from '@splinetool/react-spline'
-
 export default function Hero() {
   return (
     <section className="bg-white">
@@ -16,8 +14,31 @@ export default function Hero() {
             <a href="/register" className="px-6 py-3 rounded-md border border-[#E50914] text-[#E50914] font-semibold">Create account</a>
           </div>
         </div>
-        <div className="h-[380px] md:h-[460px] rounded-xl overflow-hidden border" style={{background:'linear-gradient(180deg,#fff, #ffffff)'}}>
-          <Spline scene="https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        {/* Decorative panel replacing the black object */}
+        <div className="h-[380px] md:h-[460px] rounded-xl overflow-hidden border relative">
+          <div className="absolute inset-0 bg-white" />
+          <div className="absolute -top-10 -right-16 w-80 h-80 rounded-full blur-3xl opacity-30" style={{ background: '#E50914' }} />
+          <div className="absolute bottom-0 left-0 right-0 h-1/2" style={{ background: 'linear-gradient(180deg, rgba(229,9,20,0.06), rgba(229,9,20,0.14))' }} />
+          <div className="relative z-10 p-6 h-full flex flex-col justify-end">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-4 rounded-lg bg-white/70 backdrop-blur border">
+                <p className="text-sm text-black/70">Avg. fee</p>
+                <p className="text-xl font-bold text-black">0.9%</p>
+              </div>
+              <div className="p-4 rounded-lg bg-white/70 backdrop-blur border">
+                <p className="text-sm text-black/70">Delivery</p>
+                <p className="text-xl font-bold text-black">Minutes</p>
+              </div>
+              <div className="p-4 rounded-lg bg-white/70 backdrop-blur border">
+                <p className="text-sm text-black/70">Coverage</p>
+                <p className="text-xl font-bold text-black">100+ countries</p>
+              </div>
+              <div className="p-4 rounded-lg bg-white/70 backdrop-blur border">
+                <p className="text-sm text-black/70">Security</p>
+                <p className="text-xl font-bold text-black">Bank‑grade</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
